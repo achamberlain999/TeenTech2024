@@ -14,10 +14,10 @@ input.onButtonPressed(Button.AB, function () {
   radio.sendString(" ");
   basic.showLeds(`
         . . . . .
-        . # # # .
-        . # # # .
-        . # # # .
         . . . . .
+        . . . . .
+        # . . . #
+        # # # # #
         `);
 });
 radio.onReceivedString(function (receivedString) {

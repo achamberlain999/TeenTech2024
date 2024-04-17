@@ -19,6 +19,8 @@ input.onButtonPressed(Button.AB, function () {
         # . . . #
         # # # # #
         `);
+  basic.pause(100);
+  basic.clearScreen();   
 });
 radio.onReceivedString(function (receivedString) {
   if (receivedString == ".") {

@@ -29,7 +29,6 @@ radio.onReceivedString(function (receivedString) {
             . . . . .
             . . . . .
             `);
-    currentWord = "" + currentWord + ".";
     basic.pause(100);
     basic.clearScreen();
   } else if (receivedString == "-") {
@@ -40,12 +39,18 @@ radio.onReceivedString(function (receivedString) {
             . . . . .
             . . . . .
             `);
-    currentWord = "" + currentWord + "-";
     basic.pause(100);
     basic.clearScreen();
   } else if (receivedString == " ") {
-    basic.showString("" + morseCodeValues[currentWord]);
-    currentWord = "";
+    basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            # . . . #
+            # # # # #
+            `);
+    basic.pause(100);
+    basic.clearScreen();
   }
 });
 input.onButtonPressed(Button.B, function () {
@@ -79,33 +84,4 @@ input.onGesture(Gesture.Shake, function () {
     basic.pause(2000);
   }
 });
-let currentWord = "";
 radio.setGroup(1);
-let morseCodeValues: { [key: string]: string } = {
-  ".-": "a",
-  "-...": "b",
-  "-.-.": "c",
-  "-..": "d",
-  ".": "e",
-  "..-.": "f",
-  "--.": "g",
-  "....": "h",
-  "..": "i",
-  ".---": "j",
-  "-.-": "k",
-  ".-..": "l",
-  "--": "m",
-  "-.": "n",
-  "---": "o",
-  ".--.": "p",
-  "--.-": "q",
-  ".-.": "r",
-  "...": "s",
-  "-": "t",
-  "..-": "u",
-  "...-": "v",
-  ".--": "w",
-  "-..-": "x",
-  "-.--": "y",
-  "--..": "z",
-};

@@ -70,18 +70,27 @@ input.onButtonPressed(Button.B, function () {
 input.onGesture(Gesture.Shake, function () {
   for (let index = 0; index < 4; index++) {
     radio.sendString(".");
+    basic.pause(300);
     radio.sendString(".");
+    basic.pause(300);
     radio.sendString(".");
+    basic.pause(300);
     radio.sendString(" ");
     basic.pause(2000);
     radio.sendString("-");
+    basic.pause(300);
     radio.sendString("-");
+    basic.pause(300);
     radio.sendString("-");
+    basic.pause(300);
     radio.sendString(" ");
     basic.pause(2000);
     radio.sendString(".");
+    basic.pause(300);
     radio.sendString(".");
+    basic.pause(300);
     radio.sendString(".");
+    basic.pause(300);
     radio.sendString(" ");
     basic.pause(2000);
   }

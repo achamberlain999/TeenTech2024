@@ -34,12 +34,12 @@ radio.onReceivedString(function (receivedString) {
   }
 });
 input.onButtonPressed(Button.B, function () {
-  basic.showString(radioGroup);
+  basic.showString("" + (radioGroup.toString()));
   basic.pause(100);
   basic.clearScreen();
 });
 input.onButtonPressed(Button.A, function () {
-  basic.showString(radioGroup);
+  basic.showString("" + (radioGroup.toString()));
   basic.pause(100);
   basic.clearScreen();
 });
